@@ -50,16 +50,14 @@ cacheSolve <- function(x, ...) {
   if(!is.null(i)){
     message("getting cached data")
     return(i)
-        #check to see if there is any cached data, if there is
-        #it is returned
+        #check to see if there is any cached data, if there is it is returned
   }
 data <- x$getmatrix()
         #if getinverse is empty retrieve the original matrix
 i <- solve(data, ...)
         #calculate the inverse
 x$setinverse(i)
-        #cache the inverse so that it may retrieved in future 
-        #analysis
+        #cache the inverse so that it may retrieved in future analysis
 i 
         # Return a matrix that is the inverse of 'x'
 }
